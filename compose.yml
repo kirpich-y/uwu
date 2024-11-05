@@ -1,0 +1,21 @@
+services:
+  webserver-1:
+    image: nginx
+    container_name: webserver-1
+    restart: unless-stopped
+    ports:
+      - 8081:80 
+  webserver-2:
+    image: nginx
+    container_name: wedserver-2
+    restart: unless-stopped
+    ports: 
+      - 8082:80
+  webserver-3:
+    image: gitea/gitea
+    container_name: webserver-2
+    restart: unless-stopped
+    ports:
+      - 8083:3000
+
+
